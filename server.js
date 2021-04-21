@@ -8,6 +8,8 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 const { animals }= require('./data/animals');
+const fs = require('fs');
+const path = require('path');
 
 
 
@@ -49,6 +51,19 @@ function findById(id, animalsArray) {
     return result;
 };
 
+// function to handle taking the data from req.body and adding to animals.json file
+function createNewAnimal(body, animalsArray) {
+    const animal = body;
+    animalsArray.push(animal);
+    fs.writeFileSync(
+        path.join(__dirname, './data/animals.json'),
+        JSON.stringify({ animals: animalsArray }, null, 2)
+    );
+
+    // retun finished code to post route for response
+    return animal;
+};
+
 app.get('/api/animals', (req, res) => {
     let results = animals;
     if (req.query) {
@@ -67,9 +82,14 @@ app.get('/api/animals/:id', (req, res) => {
 });
 
 app.post('/api/animals', (req, res) => {
+    // set id based on what the next index of the array will be
+    req.body.id = animals.length.toString();
+
+    //add animal to json file and animals array in this function
+    const animal = createNewAnimal(req.body, animals);
+
     // req.body to hold incoming content
-    console.log(req.body);
-    res.json(req.body);
+    res.json(animal);
 });
 
   app.listen(PORT, () => {
