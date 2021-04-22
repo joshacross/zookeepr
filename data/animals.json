@@ -126,6 +126,54 @@
         "hungry"
       ],
       "id": "12"
+    },
+    {
+      "name": "Great Dane",
+      "species": "Canine",
+      "diet": "omnivore",
+      "personalityTraits": [
+        "hungry",
+        "zany",
+        "anxious",
+        "loving",
+        "goofy"
+      ],
+      "id": "13"
+    },
+    {
+      "name": "Great Dane",
+      "species": "Canine",
+      "diet": "omnivore",
+      "personalityTraits": [
+        "hungry",
+        "zany",
+        "anxious",
+        "loving",
+        "goofy"
+      ],
+      "id": "14"
+    },
+    {
+      "name": "Great Dane",
+      "species": "Canine",
+      "diet": "omnivore",
+      "personalityTraits": [
+        "hungry",
+        "zany",
+        "anxious",
+        "loving",
+        "goofy"
+      ],
+      "id": "15"
+    },
+    {
+      "name": "Larry",
+      "species": "lemur",
+      "diet": "omnivore",
+      "personalityTraits": [
+        "hungry"
+      ],
+      "id": "16"
     }
   ]
 }
