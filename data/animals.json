@@ -178,6 +178,15 @@
     {
       "name": "Darlene",
       "id": "asjf098jr"
+    },
+    {
+      "name": "Gerald",
+      "species": "Mongoose",
+      "diet": "herbivore",
+      "personalityTraits": [
+        "anxious"
+      ],
+      "id": "18"
     }
   ]
 }
